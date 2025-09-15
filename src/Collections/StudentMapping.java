@@ -4,15 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class StudentMapping {
-    public static void main(String[] args) {
+    public Map<Integer,String>getStudentMap() {
         Map<Integer,String> StudentMapping = new HashMap<>();
-        StudentMapping.put(101, "Alice");
-        StudentMapping.put(102, "Bob");
-        StudentMapping.put(103, "Charlie");
+        StudentMapping.put(101, "Ali");
+        StudentMapping.put(102, "Boo");
+        StudentMapping.put(103, "Alpha");
         System.out.println("Student ID and Name:");
-
-        for (Map.Entry<Integer, String> entry : StudentMapping.entrySet()) {
-            System.out.println("ID: " + entry.getKey() + ", Name: " + entry.getValue());
-        }
+        return StudentMapping;
     }
 }

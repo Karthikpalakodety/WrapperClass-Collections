@@ -5,19 +5,14 @@ import java.util.Collections;
 import java.util.List;
 
 public class alphabeticOrder {
-    public static void main(String[] args) {
+    public List<String> getSortedEmployeeNames() {
         List<String> employeeNames = new ArrayList<>();
-
         employeeNames.add("Cha");
         employeeNames.add("Ali");
         employeeNames.add("Bar");
         employeeNames.add("Kar");
-        Collections.sort(employeeNames);
 
-        System.out.println("Sorted Employee Names :");
-        for (String name : employeeNames) {
-            System.out.println(name);
-        }
+        Collections.sort(employeeNames);
+        return employeeNames;
     }
 }
-
