@@ -248,14 +248,83 @@ public class Main {
         System.out.println("Unique Students by ID : ");
         uniqueStudents.forEach(System.out::println);*/
 
-        List<EmployeeNamesMap> employees = Arrays.asList(                //List containing just names
+/*        List<EmployeeNamesMap> employees = Arrays.asList(                //List containing just names
                 new EmployeeNamesMap("A", 50000),
                 new EmployeeNamesMap("B", 60000),
                 new EmployeeNamesMap("C", 55000)
         );
         List<String> employeeNames = employees.stream()
                 .map(EmployeeNamesMap::getName).collect(Collectors.toList());
-        System.out.println("Employee Names: " + employeeNames);
+        System.out.println("Employee Names: " + employeeNames);*/
+
+/*
+        AvgMark avgMark = new AvgMark();                                  //26.Finding avg marks
+
+        avgMark.addMark(101, 80);
+        avgMark.addMark(102, 90);
+        avgMark.addMark(103, 85);
+        avgMark.addMark(104, 75);
+        avgMark.addMark(105, 95);
+
+        double average = avgMark.getAverageMarks();
+        System.out.println("Average Marks : " + average);
+*/
+        /*
+        HighestPaid sal = new HighestPaid();                                  //top 3 highest paid salary
+
+        sal.addEmployee(new Empl(1, "A", 75000));
+        sal.addEmployee(new Empl(2, "B", 88000));
+        sal.addEmployee(new Empl(3, "C", 65000));
+        sal.addEmployee(new Empl(4, "D", 99000));
+        sal.addEmployee(new Empl(5, "E", 92000));
+
+        System.out.println("Top 3 highest-paid employees:");
+        for (Empl emp : sal.getTop3HighestPaid()) {
+            System.out.println(emp);
+        }*/
+
+/*        List<List<Integer>> listOfLists = Arrays.asList(                      //listflatter
+                Arrays.asList(1, 2, 3),
+                Arrays.asList(4, 5),
+                Arrays.asList(6, 7, 8, 9)
+        );
+
+        ListFlatter flattener = new ListFlatter();
+        List<Integer> flattened = flattener.flattenList(listOfLists);
+
+        System.out.println("Flattened List: " + flattened);*/
+ /*       EmpMatch empMatch = new EmpMatch();                  //Employee min salary
+
+        empMatch.addEmployee(new Match(1, "A", 75000));
+        empMatch.addEmployee(new Match(2, "B", 82000));
+        empMatch.addEmployee(new Match(3, "C", 70000));
+
+        double minimum = 60000;
+        boolean result = empMatch.areAllEmployeesAbove(minimum);
+
+        System.out.println("All employees earn above Rs: " + minimum + "?\n" + result);*/
+
+        StudentsPartition partitioner = new StudentsPartition();
+
+        partitioner.addPartition(new Partition(1, "A", 75));
+        partitioner.addPartition(new Partition(2, "B", 40));
+        partitioner.addPartition(new Partition(3, "C", 90));
+        partitioner.addPartition(new Partition(4, "D", 35));
+        partitioner.addPartition(new Partition(5, "E", 60));
+
+        int passMark = 50;
+
+        Map<Boolean, List<Partition>> result = partitioner.partitionByPass(passMark);
+
+        System.out.println("Passed Students : ");
+        for (Partition p : result.get(true)) {
+            System.out.println(p);
+        }
+
+        System.out.println("\nFailed Students : ");
+        for (Partition p : result.get(false)) {
+            System.out.println(p);
+        }
     }
 }
 
